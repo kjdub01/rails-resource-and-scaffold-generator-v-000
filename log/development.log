@@ -117,3 +117,23 @@ Processing by ArticlesController#new as HTML
   Rendered articles/_form.html.erb (38.5ms)
   Rendered articles/new.html.erb within layouts/application (45.2ms)
 Completed 200 OK in 72ms (Views: 65.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 24.251.52.75 at 2019-02-12 05:27:44 +0000
+Cannot render console from 24.251.52.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJ45GDw3SOpvTrQOena9otiLS15ZcHdpSoSzOKxqkADoX0dfb+EmZHwihphXIbHkZRR83pyR2pMOOUXrRUJveg==", "article"=>{"title"=>"article", "body"=>"here"}, "commit"=>"Create Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "article"], ["body", "here"], ["created_at", "2019-02-12 05:27:44.232488"], ["updated_at", "2019-02-12 05:27:44.232488"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.31.208:60795/articles/1
+Completed 302 Found in 10ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/articles/1" for 24.251.52.75 at 2019-02-12 05:27:44 +0000
+Cannot render console from 24.251.52.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 14.7ms | ActiveRecord: 0.2ms)
