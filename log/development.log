@@ -249,3 +249,23 @@ Processing by ArticlesController#index as HTML
   [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
   Rendered articles/index.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/2" for 24.251.52.75 at 2019-02-12 05:28:34 +0000
+Cannot render console from 24.251.52.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kLP168tSwXwPRfypbZgr1pMAiXD2d0qSfTDSwvDGbIBkcousmISv8hwpzj9AzyeQLp++8DOW52g5jSQRGe6T+g==", "id"=>"2"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 2]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.31.208:60795/articles
+Completed 302 Found in 5ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/articles" for 24.251.52.75 at 2019-02-12 05:28:34 +0000
+Cannot render console from 24.251.52.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.3ms)
