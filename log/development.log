@@ -61,3 +61,7 @@ Migrating to CreateArticles (20190212052449)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20190212052449"]]
   [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 24.251.52.75 at 2019-02-12 05:27:05 +0000
+Cannot render console from 24.251.52.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
